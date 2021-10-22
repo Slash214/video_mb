@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: linear-gradient(to right, #FDDF46 0%, #17D5D1 100%);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 170px;
+  padding: 100px 0;
+}
