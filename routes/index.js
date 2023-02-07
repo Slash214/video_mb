@@ -85,8 +85,8 @@ router.post('/marking', async (ctx, next) => {
 
     // add new album
     const album = new FFAlbum({
-      list: image,
-      // list: [img1, img2, img3, img4, img5, img6, img7],
+      // list: image,
+      list: [img1, img2, img3, img4, img5, img6, img7],
       x: width / 2,
       y: height / 2,
       width: width,

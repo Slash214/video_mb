@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "start": "node bin/www",
-    "dev": "./node_modules/.bin/nodemon bin/www",
+    "dev": "nodemon bin/www",
     "prd": "pm2 start bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "canvas": "^2.11.0",
     "colors": "^1.4.0",
     "debug": "^4.1.1",
-    "ffcreator": "^6.2.5",
+    "ffcreator": "^6.7.1",
     "koa": "^2.7.0",
     "koa-body": "^4.2.0",
     "koa-bodyparser": "^4.2.1",
