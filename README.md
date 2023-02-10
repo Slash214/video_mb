@@ -22,5 +22,11 @@ npm install canvas --canvas_binary_host_mirror=https://registry.npmmirror.com/-/
 
 
 
+# 2023-2-10 
+
+测试lottie 使用 ae 制作模板 导入JSON文件来操作
+目前正在测试，效果是可行的！
+
+
 
 
