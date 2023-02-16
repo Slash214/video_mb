@@ -29,4 +29,9 @@ npm install canvas --canvas_binary_host_mirror=https://registry.npmmirror.com/-/
 
 
 
+# 2023-2-15
+测试代码成功，可以使用自己制作的AE模板，实现相册模板替换
+
+
+
 

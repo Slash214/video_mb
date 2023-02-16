@@ -29,8 +29,8 @@ let imgList = [
 ];
 
 const creator = new FFCreator({
-  width: 1920,
-  height: 1080,
+  width: 1080,
+  height: 1920,
   cacheDir: path.join(__dirname, "../cache/"),
   outputDir: path.join(__dirname, "../output/"),
   debug: false,
@@ -38,6 +38,9 @@ const creator = new FFCreator({
   fps: 30,
   cover: path.join(__dirname, "../assets/imgs/cover/cover2.jpg"),
 });
+
+
+
 
 let audio = path.join(__dirname, "../assets/audio/1.mp3");
 creator.addAudio(
@@ -51,39 +54,6 @@ creator.addAudio(
 );
 
 
-// 创建画面， 画面添加图片文字  creator 添加画面
-for (let [index, item] of imgList.entries()) {
-  console.log("开始循环", index);
-  let sccens = new FFScene();
-
-  let img = new FFImage({
-    path: item,
-    x: 1920 / 2,
-    y: 1080 / 2,
-    width: 1920,
-    height: 1080,
-    animate: "fadeIn",
-  });
-
-  let text = new FFText({
-    text: `我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签我是文字文本标签${index}`,
-    fontSize: 48,
-    color: "#222222",
-    x: 1920 / 4,
-    y: 1080 / 4,
-    font: path.join(__dirname, "../assets/font/font1.ttf"),
-    style: [10, 10, 10, 10],
-  });
-  text.addEffect("fadeIn", 1);
-  text.alignCenter();
-  sccens.setTransition("TricolorCircle", 1);
-  sccens.addChild(img);
-  sccens.addChild(text);
-  creator.addChild(sccens);
-}
-
-//
-// console.log(creator);
 
 creator.start();
 

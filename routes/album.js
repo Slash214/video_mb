@@ -1,3 +1,5 @@
+
+
 const {
   FFCreatorCenter,
   FFScene,
@@ -52,8 +54,8 @@ let imgList = [
 const createFFTask = () => {
   // 创建 入口
   const creator = new FFCreator({
-    width: 1920,
-    height: 1080,
+    width: 1080,
+    height: 1920,
     cacheDir: config.cacheDir,
     outputDir: path.join(__dirname, "../output/"),
     debug: false,
@@ -76,10 +78,10 @@ const createFFTask = () => {
 
   const album = new FFAlbum({
     list: imgList,
-    x: 1920 / 2,
-    y: 1080 / 2,
-    width: 1920,
-    height: 1080,
+    x: 1080 / 2,
+    y: 1920 / 2,
+    width: 1080 / 2,
+    height: 1920 / 2,
     showCover: false,
   });
   album.setDuration(2);
