@@ -1,5 +1,3 @@
-
-
 const {
   FFCreatorCenter,
   FFScene,
@@ -7,7 +5,7 @@ const {
   FFAlbum,
   FFText,
   FFImage,
-  FFCreator,
+  // FFCreator,
 } = require("ffcreator");
 const { config } = require("../conf/index");
 const colors = require("colors");
