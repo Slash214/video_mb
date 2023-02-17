@@ -35,3 +35,5 @@ npm install canvas --canvas_binary_host_mirror=https://registry.npmmirror.com/-/
 
 
 
+# 2023-2-17 
+已完成AE模板替换的方法 去完成 一些 相册 或卡点视频，后面，我会整理完成的 demo 案例
