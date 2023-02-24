@@ -37,3 +37,9 @@ npm install canvas --canvas_binary_host_mirror=https://registry.npmmirror.com/-/
 
 # 2023-2-17 
 已完成AE模板替换的方法 去完成 一些 相册 或卡点视频，后面，我会整理完成的 demo 案例
+
+
+
+# 2023-02-24 
+已完成 相册的导出 AE模板动画的导出 合成！routes/lottie.js 文件实现了
+utils/index 实现基础相册功能
