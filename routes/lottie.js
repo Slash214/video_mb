@@ -1,6 +1,13 @@
 /**
  * 测试 lottie动画
+ * 此方法实现了 通过bodymovin 插件导出来的 AE 动画 模板 图片 替换
+ * 首先 我们 需要导出 AE 的 相册 模板 
+ * 我这里 把AE 文件放这里 
+ * 
+ * 执行方式 node lottie 就可以看见 导出 的 视频了 
  */
+
+
 const lottie = require("lottie-nodejs");
 const { Image, Canvas } = require("canvas");
 const path = require("path");
@@ -15,14 +22,6 @@ const {
   FFText,
 } = require("ffcreator");
 
-// 获取图片url数据
-const getImage = async (url) => {
-  const item = await axios.get(url).then((res) => {
-    return res;
-  });
-  console.log(item);
-  return item;
-};
 
 let cover = path.join(__dirname, "../assets/imgs/bg.jpg")
 let outputDir = path.join(__dirname, "../assets/output")
@@ -51,10 +50,11 @@ creator.addAudio(
   })
 );
 
+// 这里封装 lottie json 数据文件 同时 封装 需要 替换 的 图片 文件 
 const listData = [
   {
     id: 1,
-    data: path.join(__dirname, "../assets/test/data1.json"),
+    data: path.join(__dirname, "../json/data1.json"),
     animat: "Colorful",
     time: '2022年1月11号',
     replace: [
@@ -66,7 +66,7 @@ const listData = [
   },
   {
     id: 2,
-    data: path.join(__dirname, "../assets/test/data2.json"),
+    data: path.join(__dirname, "../json/data2.json"),
     animat: "WaterWave",
     time: '2022年2月11号',
     replace: [
@@ -77,7 +77,7 @@ const listData = [
   },
   {
     id: 3,
-    data: path.join(__dirname, "../assets/test/data3.json"),
+    data: path.join(__dirname, "../json/data3.json"),
     animat: "Stretch",
     time: '2022年4月11号',
     replace: [
@@ -88,7 +88,7 @@ const listData = [
   },
   {
     id: 4,
-    data: path.join(__dirname, "../assets/test/data4.json"),
+    data: path.join(__dirname, "../json/data4.json"),
     animat: "WaterWave",
     time: '2022年5月11号',
     replace: [
@@ -101,7 +101,7 @@ const listData = [
   },
   {
     id: 5,
-    data: path.join(__dirname, "../assets/test/data5.json"),
+    data: path.join(__dirname, "../json/data5.json"),
     animat: "Colorful",
     time: '2022年6月11号',
     replace: [
@@ -112,7 +112,7 @@ const listData = [
   },
   {
     id: 6,
-    data: path.join(__dirname, "../assets/test/data6.json"),
+    data: path.join(__dirname, "../json/data6.json"),
     animat: "WaterWave",
     time: '2022年7月11号',
     replace: [
@@ -124,6 +124,8 @@ const listData = [
   },
 ];
 
+
+// 数据循环 批量 替换
 listData.map((item, index) => {
   console.log("循环", index);
   const flottie = new FFLottie({
@@ -159,8 +161,6 @@ listData.map((item, index) => {
   scence.setDuration(5)
   creator.addChild(scence);
 });
-
-
 
 creator.start();
 
