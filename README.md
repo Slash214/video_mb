@@ -43,3 +43,10 @@ npm install canvas --canvas_binary_host_mirror=https://registry.npmmirror.com/-/
 # 2023-02-24 
 已完成 相册的导出 AE模板动画的导出 合成！routes/lottie.js 文件实现了
 utils/index 实现基础相册功能
+
+
+# 2023-03-03
+目前实现出来了完整的demo在另外一个工程，这个工程目前
+后续还会继续维护，更新！
+
+(完整项目Demo)[https://github.com/Slash214/VideoClip.git]
